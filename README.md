@@ -1,6 +1,6 @@
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 A Simple Navigation Screen <a name="about-project"></a>
+# 📖 A Simple Login & Sign-up  Screen <a name="about-project"></a>
 
 Welcome to a simple Android Login & Register form! This lightweight and intuitive application that will help you learn on how to create a siple login and register form using java.
 
