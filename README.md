@@ -20,3 +20,12 @@ Welcome to a simple Android Login & Register form! This lightweight and intuitiv
     <li><a href="/">Firebase</a></li>
   </ul>
 </details>
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **David Kinyanjui Nyaga**
+
+- GitHub: [@githubhandle](https://github.com/kinyanjui-Nyaga/)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/david-kinyanjui-software-developer/)
+
