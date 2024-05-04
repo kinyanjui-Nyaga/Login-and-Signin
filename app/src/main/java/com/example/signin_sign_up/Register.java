@@ -3,12 +3,14 @@ package com.example.signin_sign_up;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,6 +26,19 @@ public class Register extends AppCompatActivity {
     Button buttonreg;
     FirebaseAuth auth;
     ProgressBar progressBar;
+    TextView textView;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +50,17 @@ public class Register extends AppCompatActivity {
         buttonreg = findViewById(R.id.btn_register);
         auth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
+        textView = findViewById(R.id.loginNow);
+
+        textView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Login.class);
+                startActivity(intent);
+                finish();
+                return false;
+            }
+        });
 
         buttonreg.setOnClickListener(new View.OnClickListener() {
             @Override
